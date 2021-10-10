@@ -2269,7 +2269,7 @@ input, select, textarea {
 			}
 
 			#main > section.six {
-				background-color: #e8edec;
+				background-color: #d8dddc;
 			}
 
 			#main > section.seven {
@@ -2524,7 +2524,7 @@ input, select, textarea {
 						content: '\f0c9';
 						color: #fff;
 						font-size: 18px;
-						background: rgba(0, 136, 144, 0.5);
+						background: rgba(128, 136, 144, 0.5);
 						border-radius: 0.35em;
 						text-align: center;
 						position: absolute;
