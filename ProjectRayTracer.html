@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Prologue by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/Planet48x48.png"  alt="" /></span>
+							<h id="title">Preben Rønningen</h>
+							<p style="margin: 1em 0;">Game Engine & Graphics Programmer</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<!-- <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li> -->
+								<li><a href="index.html#about" id="about-link"><span class="icon solid fa-user"  style="font-size:20px">About Me</span></a></li>
+								<li><a href="index.html#portfolio" id="portfolio-link"><span class="icon solid fa-th"  style="font-size:20px">Projects</span></a></li>
+								<li><a href="index.html#cv" id="contact-link"><span class="icon solid fa-file-text"  style="font-size:20px">CV</span></a></li>
+								<!-- <li><a href="index.html#contact" id="contact-link"><span class="icon solid fa-envelope" style="font-size:20px">Contact</span></a></li> -->
+							</ul>
+						</nav>
+
+				</div>
+
+				<p style="margin: 0 30% -1em 20%;">Contact links</p>
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/PrebenRonningen/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://twitter.com/IcoSphere1/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							
+							<li><a href="https://github.com/PrebenRonningen" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							 <li><a href="mailto:preben.ronningen@mail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+				<section id="Project1" class="two">
+					<div class="ProjectEngine">
+					
+						<header class="major">
+							<h1 style="margin: 0 0 0 0; font-weight: 900; font-size: 150%;">CPU Ray Tracer</h1>
+						</header>
+						</div>
+					<div>
+						<p style="margin: 10px 4em 1em 4em; text-align: justify; font-weight: 400">
+							
+							Interesting project, as it has been quite interesting to learn a lot about what to do and what not to do when writing a ray tracer. 
+							As this was one of my first ray tracers, it taught me so much about what goes into making a working ray tracer. 
+							I am not entirely happy with how this one turned out, so I am planning on writing a new one where I will apply everything I learnt from this project :)
+						</p>
+
+						<ul style="text-align: left; margin-left: 4em; font-weight: 500;">
+							<b style="font-size: 120%; font-weight: 500;">What the Ray Tracer can do</b>
+							<li > Sphere & Plane shape intersection</li>
+							<li > Triangle mesh intersection</li>
+							<li > Material rendering: Lambda, Phong & Cook-Torrance</li>
+							<li > Cull modes for meshes: Front-Face Culling, Back-Face Culling & No Culling</li>
+							<li > Point Light & Directional Light</li>
+							<li > Camera movement (controlled keyboar & mouse, can be controlled entirely with keyboard)</li>
+							<li > Hard shadows</li>
+							<li > Cycelable Scenes</li>
+						</ul>
+					</div>
+
+
+
+
+						<ul>
+							<span class="image img"><img src="images/RayTracer6 SpheresAndTriangles.bmp" alt="" ></span>
+							<span class="image img"></span><img src="images/RayTracer7 Stanford bunny.bmp" alt=""  ></span>
+						</ul>
+
+						<div style="display: table; content: unset; clear: both;">
+							<div style="float: left; margin: 0 0 0 10%; width: 40%; text-align: justify;" >
+								<ul style="text-align: left; font-weight: 500;">
+									<b style="font-size: 120%; font-weight: 500;">Spheres And Triangles</b>
+									<li > 3 Triangles rendered with:</br> Back-Face Culling, Front-Face Culling & No Culling.</li>
+									<li > 6 Spheres: </br>
+										Top 3 are rendered with:
+										metallic cook-torrance materials: Rough Silver, Mat Gold & Shiny Zinc (roughness 1, 0.6, 0.1)
+										Bottom 3 rendered with:
+										dilectric cook-torrance materials: Rough-Green, Mat-Blue, Shiny-Red.</li>
+									<li > 4 Lights:</br>
+										3 Pointlights,
+										1 Directional light.</li>
+									<li > 5 Planes:</br>
+										All with a blue dilectric cook-torrance materials (rough 0.4)</li>									
+								</ul>
+							</div>
+									
+							<div style="float: right; margin: 0 10% 0 0;  width: 40%; text-align: justify;">
+								<ul style="text-align: left; font-weight: 500;">
+									<b style="font-size: 120%; font-weight: 500;">Stanford Bunny</b>
+									<li > 1 Stanford Bunny with a White Lambert material.</li>
+									<li > 3 Point Lights.</li>
+									<li > 1 Directional Light</li>
+									<li > 5 Planes</br> All with a blue dilectric cook-torrance materials (roughness 0.4)</li>
+								</ul>
+							</div>
+						</div>
+
+						<div style=" display: flex; flex-wrap: wrap; padding: 5px;">
+							<div style=" margin-left: 5%; flex: 20%; max-width: 30%; padding: 5px;">
+								<img src="images/RayTracer1 Sphere&Plane-Intersection.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+								<img src="images/RayTracer4 TriangleMesh & Cullmodes.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+							</div>
+							<div style="max-width: 30%; padding: 5px;">
+								<img src="images/Raytracer2 Lights.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+								<img src="images/RayTracer5 Spheres.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+							</div>
+							<div style="max-width: 30%; padding: 5px;">
+								<img src="images/RayTracer3 Materials.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+								<img src="images/RayTracer7 Stanford bunny.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+							</div>
+						</div>
+							<div class="bottom">
+
+								<!-- Social Icons -->
+									<ul class="b">
+										<a href="Projects.html#Project1" class="button scrolly" style="float: left;"><span class="label">Go Back</span></a>
+										<a href="Projects.html#Project1" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-github"></span> <span class="label">GitHub</span></a>
+									</ul>
+							</div>			
+				</div>
+				</section>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
