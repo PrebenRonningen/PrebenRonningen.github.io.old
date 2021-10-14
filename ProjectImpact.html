@@ -63,21 +63,50 @@
 						<header class="major">
 							<h1 style="margin: 0 0 0 0; font-weight: 900; font-size: 150%;">3D Game Engine (WIP)</h1>
 						</header>
-						<span class="image img"><img src="images/ImpactEngine.png" alt=""  style="margin: 1em 0;" ></span>
+						<span class="video">
+							<video width="1280" height="720" poster="images/Impact/Hold.png" preload="metadata" controls="controls"  onloadstart="this.volume=1" style="margin: 1em 0 1em 0;">
+								<source src="images/Impact/ImpactDemo.mp4" type="video/mp4" alt="" >
+							</video>
+						</span>
 						<p style="margin: 0em 2em 1em 2em; text-align: justify; color: black">
-							Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-							Pellentesque venenatis dolor imperdiet dolor mattis sagittis. 
-							Praesent rutrum sem diam, vitae egestas enim auctor sit amet. 
-							Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. 
-							Pellentesque in mi eu massa lacinia malesuada et a elit. 
-							Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. 
-							Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. 
-							Pellentesque enim turpis, hendrerit.
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Pellentesque venenatis dolor imperdiet dolor mattis sagittis. 
-							Praesent rutrum sem diam, vitae egestas enim auctor sit amet. 
-							Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. 
-							Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							When I started this project, I knew I wanted to learn how to work with DirectX11 without using the Effects system, but I didn't really know where to begin. </br>
+							As a guiding hand I looked at other projects and their arcitecture, which helped me get started. I learned a lot from Microsofts Documentation on Win32, as well as 
+							looking into how others had solved the issues I ran into. I found a render engine called "hw3d" by PlanetChili, after examining it, I saw things I liked, and things I didn't like as much.
+							I took inspiration from the things I liked, and came up with my own solutions for what I didn't like.
+						</br>
+							As an example of what I didn't like, the hard-coded order of objects in the apps render function(left).</br>
+							Where my solution is a layered structure, where Objects to be rendered get's handled elsewhere(right). </br>
+							<ul style="white-space: nowrap; list-style: none; display: flex; margin: 0 15%">
+								<li style="margin: 0 5%" ><img src="images/Impact/ChiliDoFrame.png"></li>
+								<li style="margin: 0 5%; transform: scale(50%);"><img src="images/Impact/ImpactRender.png"></li>
+						</ul>
+						<p style="margin: 0em 2em 1em 2em; text-align: justify; color: black">
+							The idea of the layer structure, is to separate each aspect into its own domain. With this in mind, I made an event handler that sends events through the layers like a sift to get handled.
+							 
+						</p>
+						<div style=" display: flex; flex-wrap: wrap; padding: 5px; margin: 0 20%;">
+							<div style="list-style: none; margin-left: 5%;  padding: 5px;">
+								<li ><img src="images/Impact/EventRegistration.png"> </br>
+									<p style="margin: 0em 2em 1em 2em; color: black">
+									First register the event which should be called, and what should triger it.</p></li>
+								<li ><img src="images/Impact/Handle.png"> </br>
+									<p style="margin: 0em 2em 1em 2m;  color: black">
+										Then when the trigger happenes, we send the event through. </p></li>
+								<li ><img src="images/Impact/Layers.png"></li>
+							</div>	
+						</div>
+					<p style="margin: 0em 2em 1em 2em; text-align: justify; color: black">
+						The Rendering & Update loop happens in the reverse order Game > UI > Debug > Application.</br>
+						The engines objects are built up from components, currently using a very simple component system which for now it's engouh.
+					</br>
+					The engine can currently do just a few things 	<b style=" text-align: justify; font-weight: 500;color: black">
+						render primitive objects, diffuse texture rendering, point & directional lighting, dynamic camera movement
+					</b></br>
+					Next on my list of things to implement is the option to import assets, multiple texture maps such as hight-maps, normal maps and rooughness maps etc.</br>
+					 
+
+					</p>	 
+					</p>
 				
 					
 							<div class="bottom">
