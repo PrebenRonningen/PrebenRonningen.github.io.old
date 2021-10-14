@@ -78,23 +78,25 @@
 							Where my solution is a layered structure, where Objects to be rendered get's handled elsewhere(right). </br>
 							<ul style="white-space: nowrap; list-style: none; display: flex; margin: 0 15%">
 								<li style="margin: 0 5%" ><img src="images/Impact/ChiliDoFrame.png"></li>
-								<li style="margin: 0 5%; transform: scale(50%);"><img src="images/Impact/ImpactRender.png"></li>
+								<li style="margin: 0 5%"><img src="images/Impact/ImpactRender.png"></li>
 						</ul>
-						<p style="margin: 0em 2em 1em 2em; text-align: justify; color: black">
+						<p style="margin: 0em 2em 0em 2em; text-align: justify; color: black">
 							The idea of the layer structure, is to separate each aspect into its own domain. With this in mind, I made an event handler that sends events through the layers like a sift to get handled.
 							 
 						</p>
 						<div style=" display: flex; flex-wrap: wrap; padding: 5px; margin: 0 20%;">
 							<div style="list-style: none; margin-left: 5%;  padding: 5px;">
+								<p style="margin: 0em 2em 1em 2em; color: black">
+								First register the event which should be called, and what should triger it.</p></li>
 								<li ><img src="images/Impact/EventRegistration.png"> </br>
-									<p style="margin: 0em 2em 1em 2em; color: black">
-									First register the event which should be called, and what should triger it.</p></li>
-								<li ><img src="images/Impact/Handle.png"> </br>
-									<p style="margin: 0em 2em 1em 2m;  color: black">
-										Then when the trigger happenes, we send the event through. </p></li>
-								<li ><img src="images/Impact/Layers.png"></li>
-							</div>	
+							</div>
 						</div>
+						<p style="margin: 0em 2em 1em 2em; color: black">
+							Then when the trigger happenes, we send the event through. </br></p>
+						<ul style=" list-style: none; display: flex; margin: 0 12%;" >
+							<li style=" padding: 0 5%;"><img src="images/Impact/Handle.png"></li>
+							<li ><img src="images/Impact/Layers.png"></li>
+					</ul>								
 					<p style="margin: 0em 2em 1em 2em; text-align: justify; color: black">
 						The Rendering & Update loop happens in the reverse order Game > UI > Debug > Application.</br>
 						The engines objects are built up from components, currently using a very simple component system which for now it's engouh.
