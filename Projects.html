@@ -34,10 +34,11 @@
 				<div class="bottom">
 					<!-- Social Icons -->
 					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/PrebenRonningen/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-						<li><a href="https://twitter.com/IcoSphere1/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/PrebenRonningen" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="mailto:preben.ronningen@mail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://www.linkedin.com/in/PrebenRonningen/" target="_blank" class="icon brands fa-linkedin" style="scale: 2;"><span class="label">Linkedin</span></a></li>
+						<!-- <li><a href="https://twitter.com/IcoSphere1/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+
+						<li><a href="https://github.com/PrebenRonningen" target="_blank" class="icon brands fa-github" style="margin: 0em 1em 0em 1em; scale: 2;"><span class="label">Github</span></a></li>
+						<li><a href="mailto:preben.ronningen@mail.com" target="_blank" class="icon solid fa-envelope" style="scale: 2;"><span class="label">Email</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -45,12 +46,67 @@
 		<!-- Main -->
 			<div id="main">
 				<!-- Intro -->
-				<section id="Project1" class="two">
-					<div class="GroupProjectCrashed">		
+				<section id="Project6" class="two" >
+					<div class="ProjectTribute">				
+						<header class="major">
+							<h1>Titan's Tribute</h1>
+							Unreal Engine Group project.
+						</header>
+						<span class="video">
+							<video  width="1280" height="720" poster="images/TTInter.png" preload="metadata" controls="controls" onloadstart="this.volume=0.1" style="margin: 1em 0 1em 0;">
+								<source src="images/TitansTribute/TTTrailer.mp4" type="video/mp4" alt="" >
+							</video>
+						</span>
+						<p style="margin: 0em 2em 1em 2em; text-align: center; color: black">
+							I began this project by spending 2-3 weeks developing a prototype that would be good enough to convey the idea in a pitch.<br>
+							After the idea was pitched and approved I worked in a team with 5 other people to make the game idea a reality.<br>
+							A 3rd person Arena Fighter.<br>
+							As the project began development my programmer role became UI & Gameplay Developer.
+						</p>
+											
+							<ul class="b">
+							<a href="index.html" class="button scrolly" style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"> Go Back</span></a>
+							<a href="ProjectTitansTribute.html"class="button scrolly" style="margin: 0em 0em 0em 6em; float: centre;"></span><span class="label"></span> Learn more</a>
+							<a href="https://pronningen.itch.io/titans-tribute" target="_blank" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-itch-io"></span> <span class="label">Check it out on Itch.io</span></a>
+						</ul>
+					</div>
+				</section>
+
+
+				<section id="Projectgw" class="three">
+					<div class="ProjectResearch" >			
+						<header class="major">
+							<h1>Research Project </br></h1>
+							Comparing sphere generations algorithms applied to procedural Planets
+						</header>
+						<span  class="image img"><img src="images/SphereGWproj.png" alt="" style="margin: 1em 0;"/></span>
+						<p style="margin: 0em 2em 1em 2em; text-align: center; color: black"> 
+							From the 28th of September 2021 until the 28th of January 2022, I had this as my graduation research project.
+							With this I investigate the different "pros and cons" with multiple sphere generation algorithms
+							like the UV Sphere, Quad Sphere, IcoSphere and the Fibonacci Sphere. I did my best to compare the difference in
+							vertex distribution & density, the difference in data storage, how much controll we have when subdividing,
+							which algorithm lends itself best to utilize the UV space most efficiantly and which has the best triangular uniformity.
+							For this I made a interractive sphere generation Project in Unity where I would apply textures, noice-maps 
+							and adjust other parameters to generate a planet like object. The target bodys to replicate was the Earth, and Earth like planets.  
+						</p>
+						<ul class="b">
+							<a href="index.html" class="button scrolly" style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"> Go Back</span></a>
+							<a href="ProjectGradWork.html" class="button scrolly" style="margin: 0em 0em 0em 6em; float: centre;"></span><span class="label"></span> Learn more</a>
+							<a href="https://github.com/PrebenRonningen/PlanetMeshGeneration" target="_blank" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-github"></span> <span class="label">Check it out on GitHub</span></a>
+						</ul>	
+					</div>
+				</section>
+
+				<section id="Project1" class="four">
+					<div class="ProjectImpact">		
 						<header class="major">
 							<h1>3D Game Engine (WIP)</h1>
 						</header>
-						<span class="image img"><img src="images/ImpactEngine.png" alt=""  style="margin: 1em 0;" ></span>
+						<span class="video">
+							<video width="1280" height="720" poster="images/Impact/Hold.png" preload="metadata" controls="controls"  onloadstart="this.volume=1" style="margin: 1em 0 1em 0;">
+								<source src="images/Impact/ImpactDemo.mp4" type="video/mp4" alt="">
+							</video>
+						</span>
 						<p style="margin: 0em 2em 1em 2em; text-align: center; color: black">
 							For this Project I set myself a clear goal. I want to learn more about what goes into making a game engine, and I want to be able to make a game in it. 
 							The game I decided on is "X-COM: UFO Defense" from 1994 (also known as X-COM: Enemy Unknown). For this purpose I will focus on making what's needed to create each distinct part of the game,
@@ -58,18 +114,23 @@
 						</p>
 					
 						<ul class="b">
-							<a href="ProjectImpact.html" class="button scrolly"  style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"></span> Learn more</a>
-							<a href="https://github.com/PrebenRonningen/Impact" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-github"></span> <span class="label">Check it out on GitHub</span></a>
+							<a href="index.html" class="button scrolly" style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"> Go Back</span></a>
+							<a href="ProjectImpact.html" class="button scrolly" style="margin: 0em 0em 0em 6em; float: centre;"></span><span class="label"></span> Learn more</a>
+							<a href="https://github.com/PrebenRonningen/Impact" target="_blank" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-github"></span> <span class="label">Check it out on GitHub</span></a>
 						</ul>
 					</div>
 				</section>
 
-				<section id="Project2" class="three">
+				<section id="Project2" class="five">
 					<div class="CrashedGP">		
 						<header class="major">
 							<h1>CRASHED</h1>
 						</header>
-						<span class="image img"><img src="images/GroupProjectInter.png" alt=""  style="margin: 1em 0;" ></span>
+						<span class="video">
+							<video  width="1280" height="720" poster="images/Crashed/Group31_Crashed_02.jpg" preload="metadata" controls="controls" onloadstart="this.volume=0.1" style="margin: 1em 0 1em 0;">
+								<source src="images/Crashed/Group31_Crashed_Trailer.mp4" type="video/mp4" alt="" >
+							</video>
+						</span>
 						<p style="margin: 0em 2em 1em 2em; text-align: center; color: black;" >
 							In the second semester of my second year, we were put in groups of up to 6 people. My group consisted of 4 people, 2 programmers and 2 artists.
 						    The focus of the course was to get a hands-on experience in creating a vertical-slice of a game with a team.
@@ -80,32 +141,41 @@
 						<!-- href="https://veerlez.itch.io/crashed" -->
 						
 						<ul class="b">
-							<a href="ProjectCrashed.html" class="button scrolly"  style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"></span> Learn more</a>
-							<a href="https://veerlez.itch.io/crashed" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-itch-io"></span> <span class="label"> Check it out on Itch.io</span></a>
+							<a href="index.html" class="button scrolly" style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"> Go Back</span></a>
+							<a href="ProjectCrashed.html" class="button scrolly"  style="margin: 0em 0em 0em 5.5em; float: centre;"></span><span class="label"></span> Learn more</a>
+							<a href="https://veerlez.itch.io/crashed" target="_blank" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-itch-io"></span> <span class="label"> Check it out on Itch.io</span></a>
 						</ul>
 						
 					</div>
 				</section>
 
-				<section id="Project3" class="four">
+				<section id="Project3" class="six">
 					<div class="ProjectBomberMan">			
 						<header class="major">
 							<h1>Bomber-Man</h1>
+							Any stuttering and/or other framerate issues is from the recording software and is not precent in the application.
+
 						</header>
-						<span class="image img"><img src="images/BomberManInter.png" alt=""  style="margin: 1em 0;" ></span>
+						<span class="video">
+							<video width="1280" height="720" poster="images/BomberMan/StartMenu.png" preload="metadata" controls="controls"  onloadstart="this.volume=1" style="margin: 0em 0 1em 0;">
+								<source src="images/BomberMan/BomberManShow.mp4" type="video/mp4" alt="" >
+							</video>
+						</span>
 						<p style="margin: 0em 2em 1em 2em; text-align: center; color: black">
 							In this project we were given a stripped down game engine at the start of the semester.
 							Through the semester we had to build it back up by implementing the missing parts and create a game with it at the end.
 							The final project for the course was to make a game in the engine we had spent the semester putting together.
 							I decided on making a Local Co-op game, and for that I thought Bomber-Man would be a good fit.	
 						</p>
-						
-						<a href="ProjectBomberMan.html" class="button scrolly">Learn more</a>
+						<ul class="b">
+							<a href="index.html" class="button scrolly" style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"> Go Back</span></a>
+							<a href="ProjectBomberMan.html" class="button scrolly" style="margin: 0em 10.5em 0em 0em; float: centre;"></span><span class="label"></span> Learn more</a>
+						</ul>
 
 					</div>
 				</section>
 
-				<section id="Project4" class="five">
+				<section id="Project4" class="seven">
 					<div class="ProjectRenderer">			
 						<header class="major">
 							<h1>CPU & GPU Rasterizer</h1>
@@ -119,8 +189,9 @@
 						</p>
 											
 						<ul class="b">
-							<a href="ProjectRasterizer.html" class="button scrolly"  style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"></span> Learn more</a>
-							<a href="https://github.com/PrebenRonningen/GPU-CPU-Rasterizer" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-github"></span> <span class="label">Check it out on GitHub</span></a>
+							<a href="index.html" class="button scrolly" style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"> Go Back</span></a>
+							<a href="ProjectRasterizer.html" class="button scrolly" style="margin: 0em 0em 0em 5.5em; float: centre;"></span><span class="label"></span> Learn more</a>
+							<a href="https://github.com/PrebenRonningen/GPU-CPU-Rasterizer" target="_blank" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-github"></span> <span class="label">Check it out on GitHub</span></a>
 						</ul>
 					</div>
 				</section>
@@ -144,53 +215,18 @@
 						</p>
 																	
 						<ul class="b">
-							<a href="ProjectRayTracer.html" class="button scrolly"  style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"></span> Learn more</a>
-							<a href="https://github.com/PrebenRonningen/RayTracer" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-github"></span> <span class="label">Check it out on GitHub</span></a>
+							<a href="index.html" class="button scrolly" style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"> Go Back</span></a>
+							<a href="ProjectRayTracer.html" class="button scrolly"  style="margin: 0em 0em 0em 6em; float: centre;"><span class="label"></span> Learn more</a>
+							<a href="https://github.com/PrebenRonningen/RayTracer" target="_blank" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-github"></span> <span class="label">Check it out on GitHub</span></a>
 						</ul>
 					</div>
 				</section>
 
-				<section id="Project6" class="six" >
-					<div class="ProjectTribute">				
-						<header class="major">
-							<h1>Titan's Tribute</h1>
-						</header>
-						
-						<span class="image img"><img src="images/TTInter.png" alt=""  style="margin: 1em 0;" ></span>
-						<p style="margin: 0em 2em 1em 2em; text-align: center; color: black">
-							This Unreal Engine project is currently in production, I am working in a team with 5 other people. To make a 3rd person Arena Fighter.
-							My current role as a Programmer is Systems and UI Developer. More information will come on this as we get closer to finishing the project.  	
-						</p>
-											
-						<a href="Projects.html#Project6" class="button scrolly">TBA</a>
-					</div>
-				</section>
-
-
-				<section id="Projectgw" class="seven">
-					<div class="ProjectResearch" >			
-						<header class="major">
-							<h1>Research Project </br></h1>
-							Comparing sphere generations algorithms applied to procedural Planets
-						</header>
-						<span  class="image img"><img src="images/SphereGWproj.png" alt="" style="margin: 1em 0;"/></span>
-						<p style="margin: 0em 2em 1em 2em; text-align: center; color: black"> 
-							From the 28th of September 2021 I have this as my graduation research project.
-							With this I would like to investigate the different pros and cons with multiple sphere generation algorithms
-							like the UV Sphere, Quad Sphere, IcoSphere and the Fibonacci Sphere. I hope to compare the difference in
-							vertex distribution & density, the difference in stored data, how much controll we have when subdividing,
-							which lends itself best to utilize the UV space most efficiantly and which has the best triangular uniformity.
-							For this there will be made a interractive sphere generation software where we will be able to apply textures, noice-maps 
-							and adjust other parameters to generate a planet like object. The target bodys to replicate will be both the Moon and the Earth.  
-						</p>
-							<a href="Projects.html#Projectgw" class="button scrolly">TBA</a>
-					</div>
-				</section>
 				<!-- Social Icons -->
 				<section id="meep" class="six">
 				<ul class="b">
 					<a href="index.html" class="button scrolly" style="float: left;"><span class="icon arrow fa-arrow-alt-circle-left"></span><span class="label"> Go Back</span></a>
-					<a href="https://github.com/PrebenRonningen/" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-github"></span> <span class="label">GitHub</span></a>
+					<a href="https://github.com/PrebenRonningen/" target="_blank" class="button scrolly" style="float: right; margin-right: 1em;"><span class="icon brands fa-github"></span> <span class="label">GitHub</span></a>
 				</ul>
 			</section>
 			</div>
