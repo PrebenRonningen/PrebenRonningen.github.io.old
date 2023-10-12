@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Pathfinding study</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/generic/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/generic/css/noscript.css" /></noscript>
+		<link rel="icon" href="../images/SphereGW.png">
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+							
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+							
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="overpass.html">Overpass 2</a></li>
+							<li><a href="starbase.html">Starbase</a></li>
+							<li><a href="trine5.html">Trine 5: A Clockwork Conspiracy</a></li>
+							<li><a href="pathfinder.html">Pathfinding study</a></li>
+							<li><a href="turrets.html">Turret targeting study</a></li>
+							<li><a href="spheres.html">Sphere generation research study</a></li>
+							<li><a href="engine.html">Small 3D Engine (R&D)</a></li>			
+							<li><a href="rasterizer.html">CPU/GPU rasterizer (3DX11)</a></li>
+							<li><a href="raytracer.html">CPU ray tracer</a></li>
+							<li><a href="titanstribute.html">Titan's Tribute - UE4 game</a></li>
+							<li><a href="crashedgame.html">Crashed - Unity game</a></li>
+							<li><a href="bomberman.html">Bomber-Man</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Pathfinding study</h1>
+							<span class="image main"><img src="../images/banner/PathfinderBanner.png" alt="" /></span>
+							<p>I started this project because I wanted to see how well I could implement the A* pathfinder and use it in a game like scenario.</p>
+								 <p>In this project, I ventured into the world of A* pathfinding, a crucial aspect of turn-based gaming. 
+									Throughout its development, I explored various phases, ranging from basic navigation through open terrains and randomized obstacles to overcoming complex labyrinths in both 2D and 3D environments. 
+									The objective was to create a flexible pathfinding solution suitable for improving gameplay in turn-based games.</p>
+
+									<p>I began the project by implementing a straightforward A* pathfinder within a 2D environment. 
+										The initial phase aimed at introducing obstacles for the pathfinder to navigate around, adding complexity to its decision-making. 
+										Subsequently, a substantial portion of the project involved optimizing the pathfinding algorithm to enhance its efficiency. 
+									</p>
+								 <div style="display: flex;">
+									<div style=" padding: 0px; text-align: center;">
+										<img src="../images/Pathfinder/2Dpath1.png" alt="Image 1" style="max-width: auto; height: 70%;">
+										<p>100x100 cells, 0% obtacle coverage, path found in 166ms</p>
+									</div>
+									<div style=" padding: 0px; text-align: center;">
+										<img src="../images/Pathfinder/2Dpath2.png" alt="Image 2" style="max-width: auto; height: 70%">
+										<p>255x255 cells, 30% obtacle coverage, path found in 4.6s</p>
+									</div>
+								</div>
+								<p>The initial runtime of over four seconds for pathfinding was significantly reduced to create a more responsive solution.
+									 Furthermore, I incorporated a "no-corner cutting" feature to ensure that the pathfinding remained reliable.
+									  I then put this improved pathfinder to the test on a 255x255 map inspired by Baldur's Gate II.</p>
+									  <p>As the project evolved, my focus shifted to the exploration of path limiting, introducing an "energy" score that decreased with each cell traversed. 
+										This mechanism was evaluated on a labyrinth map, demonstrating that the pathfinding process conformed to the initial energy constraints. 
+										To further enhance realism, I introduced variable cell costs to simulate rough terrain.</p>
+							
+									<div style="display: flex;">
+										<div style="flex: 1; padding: 5px; text-align: center;">
+											<img src="../images/Pathfinder/baldur2.png" alt="Image 1" style="max-width: 100%; height: 50%;">
+											<p>255x255 cells, Baldur's Gate II map, added no cornercutting</p>
+										</div>
+										<div style="flex: 1; padding: 5px; text-align: center;">
+											<img src="../images/Pathfinder/labyrinth.png" alt="Image 2" style="max-width: 100%; height: 50%;">
+											<p>Labiryth with max-movement and tile movement cost</p>
+										</div>
+										<div style="flex: 1; padding: 5px; text-align: center;">
+											<img src="../images/Pathfinder/lab2.png" alt="Image 3" style="max-width: 100%; height: 50%;">
+											<p>Variable cost nodes(left)     &     Uniform cost nodes (right)</p>
+										</div>
+									</div>
+									<p>Satisfied with the 2D pathfinder's performance, I expanded its capabilities into the realm of 3D pathfinding. 
+										The challenges here included navigating inclines, slopes, and addressing issues related to paths passing through objects. 
+										Despite these initial hurdles, I swiftly resolved these concerns.</p>
+										<div style="display: flex;">
+											<div style="flex: 1; padding: 5px; text-align: center;">
+												<img src="../images/Pathfinder/3Dtest1.png" alt="Image 1" style="max-width: 100%; height: 60%;">
+												<p>3D test environment showing all walkable cells</p>
+											</div>
+											<div style="flex: 1; padding: 5px; text-align: center;">
+												<img src="../images/Pathfinder/3Dtest2.png" alt="Image 2" style="max-width: 100%; height: 60%;">
+												<p>3D test environment different elevation and slopes</p>
+											</div>
+											<div style="flex: 1; padding: 5px; text-align: center;">
+												<img src="../images/Pathfinder/3Dtest3.png" alt="Image 3" style="max-width: 100%; height: 60%;">
+												<p>3D test environment path blocking with different elevations</p>
+											</div>
+											<div style="flex: 1; padding: 5px; text-align: center;">
+												<img src="../images/Pathfinder/3Dtest4.png" alt="Image 3" style="max-width: 100%; height: 60%;">
+												<p>3D test environment path down slopes and ledge drop off</p>
+											</div>
+										</div>
+										<p>The next step involved extending the pathfinding to consider dropping off edges to discover the shortest path while reintroducing wall structures that obstructed movement in specific directions.</p>
+										<div><div style="display: flex;">
+											<div style="flex: 1; padding: 5px; text-align: center;">
+												<img src="../images/Pathfinder/walls.png" alt="Image 1" style="max-width: 100%; height: 50%;">
+												<p>3D test environment with walls blocking the path</p>
+											</div>
+											<div style="flex: 1; padding: 5px; text-align: center;">
+												<img src="../images/Pathfinder/walls2.png" alt="Image 2" style="max-width: 100%; height: 50%;">
+												<p>3D test environment elevated room with slope and walls</p>
+											</div>
+										</div>
+										<p>Once this functionality was fully integrated, I created a test map inspired by the layouts of XCOM: UFO Defense. 
+											However, adapting these maps, originally designed for an old isometric game, to a 3D environment presented some scaling challenges. 
+											These were successfully addressed, resulting in a more fluid mapping experience.</p>
+											<div style="display: flex;">
+												<div style="flex: 1; padding: 5px; text-align: center;">
+													<img src="../images/Pathfinder/Xcom-Map1.png" alt="Image 1" style="max-width: 100%; height: 75%;">
+													<p>Original XCOM map from XCOM: UFO Defense</p>
+												</div>
+												<div style="flex: 1; padding: 5px; text-align: center;">
+													<img src="../images/Pathfinder/isometric.png" alt="Image 2" style="max-width: 100%; height: 75%;">
+													<p>Recreation of XCOM map in Unity (Isometric view)</p>
+												</div>
+												<div style="flex: 1; padding: 5px; text-align: center;">
+													<img src="../images/Pathfinder/perspective.png" alt="Image 2" style="max-width: 100%; height: 75%;">
+													<p>Recreation of XCOM map in Unity (perspective view)</p>
+												</div>
+											</div>
+											<p>Nevertheless, as the project advanced, performance issues became evident, particularly when mapping longer paths. 
+												To rectify this, I transitioned to Unity's burst job system, significantly enhancing the pathfinder's performance. 
+												The result is a functional and efficient pathfinding solution ready for practical application.</p>
+												<b>Show case:</b>
+												<span class="video">
+													<video width="1280" height="720" poster="../images/thumbs/Pathfinder.png" preload="metadata" controls="controls"  onloadstart="this.volume=1" style="margin: 1em 0 1em 0;">
+														<source src="../images/Pathfinder/pathfinder.mp4" type="video/mp4" alt="" >
+													</video>
+												</span>
+
+												<p>*Note: Project source temporarily not available.</p>
+									</div>
+						</div>
+					</div>
+			</div>
+
+
+
+		<!-- Scripts -->
+			<script src="../assets/generic/js/jquery.min.js"></script>
+			<script src="../assets/generic/js/browser.min.js"></script>
+			<script src="../assets/generic/js/breakpoints.min.js"></script>
+			<script src="../assets/generic/js/util.js"></script>
+			<script src="../assets/generic/js/main.js"></script>
+
+	</body>
+</html>

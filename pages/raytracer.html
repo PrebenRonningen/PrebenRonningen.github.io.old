@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>CPU ray-tracer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/generic/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/generic/css/noscript.css" /></noscript>
+		<link rel="icon" href="../images/SphereGW.png">
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+							<a href="https://github.com/PrebenRonningen/RayTracer" class="logo">
+								<span class="icon brands fa-github fa-2x"></span><span class="title">Project can be found here on Github</span>
+							</a>
+						<!-- Logo -->
+							
+						<!-- Nav -->
+							<nav>
+								<ul>
+									<li><a href="#menu">Menu</a></li>
+								</ul>
+							</nav>
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="overpass.html">Overpass 2</a></li>
+							<li><a href="starbase.html">Starbase</a></li>
+							<li><a href="trine5.html">Trine 5: A Clockwork Conspiracy</a></li>
+							<li><a href="pathfinder.html">Pathfinding study</a></li>
+							<li><a href="turrets.html">Turret targeting study</a></li>
+							<li><a href="spheres.html">Sphere generation research study</a></li>
+							<li><a href="engine.html">Small 3D Engine (R&D)</a></li>			
+							<li><a href="rasterizer.html">CPU/GPU rasterizer (3DX11)</a></li>
+							<li><a href="raytracer.html">CPU ray tracer</a></li>
+							<li><a href="titanstribute.html">Titan's Tribute - UE4 game</a></li>
+							<li><a href="crashedgame.html">Crashed - Unity game</a></li>
+							<li><a href="bomberman.html">Bomber-Man</a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>CPU ray-tracer</h1>
+							<span class="image main"><img src="../images/banner/BunnyBanner.png" alt="" /></span>
+							<p>Embarking on the journey of creating a CPU ray tracer was an great experience that provided valuable insights into the intricacies of computer graphics.
+								 As one of my initial forays into the world of ray tracing, this project served as an invaluable learning platform. 
+								 While I may not be entirely satisfied with the results, it laid a strong foundation and inspired me to continue honing my skills in this fascinating field.</p>
+							<p>My CPU ray tracer boasts several key features that demonstrate its capabilities:</p>
+							<ul>
+								<li><b>Geometry Intersection:</b> The ray tracer can accurately intersect with spheres, planes, and complex triangle meshes, allowing for the rendering of diverse 3D scenes.</li>
+								<li><b>Material Rendering:</b> It supports various material models, including Lambert, Phong, and Cook-Torrance, enabling the realistic depiction of surfaces with different properties.</li>
+								<li><b>Culling Modes:</b> The ability to choose between front-face culling, back-face culling, or no culling for meshes provides flexibility in scene optimization.</li>
+								<li><b>Lighting:</b> The ray tracer incorporates both point lights and directional lights, facilitating the creation of compelling lighting effects and shadows.</li>
+								<li><b>Camera Control:</b> Users can manipulate the camera using keyboard or keyboard and mouse inputs, granting them full control over the view.</li>
+								<li><b>Shadows:</b> The project implements hard shadows, enhancing the visual realism of scenes.</li>
+								<li><b>Scene Cycling:</b> The ray tracer can seamlessly cycle through different scenes, showcasing its versatility in rendering various environments.</li>
+							</ul>
+							<ul>
+								<span class="image img"><img src="../images/raytracer/RayTracer6 SpheresAndTriangles.bmp" alt="" ></span>
+								<span class="image img"></span><img src="../images/raytracer/RayTracer7 Stanford bunny.bmp" alt=""  ></span>
+							</ul>
+							<div style="display: table; content: unset; clear: both;">
+								<div style="float: left; margin: 0 0 0 0; width: 50%; text-align: justify;" >
+									<ul style="text-align: left; font-weight: 500;">
+										<b>Spheres And Triangles</b>
+										<li > 3 triangles rendered with:</br> Back-Face Culling, Front-Face Culling & No Culling.</li>
+										<li > 6 spheres: </br>
+											Top 3 are rendered with:
+											metallic Cook-Torrance materials: Rough Silver, Mat Gold & Shiny Zinc (roughness 1, 0.6, 0.1)
+											Bottom 3 rendered with:
+											dielectric Cook-Torrance materials: Rough-Green, Mat-Blue, Shiny-Red.</li>
+										<li > 4 lights:</br>
+											3 point lights,
+											1 directional light.</li>
+										<li > 5 planes:</br>
+											All with blue dielectric Cook-Torrance materials (rough 0.4)</li>									
+									</ul>
+								</div>
+										
+								<div style="float: right; margin: 0 0 0 0;  width: 50%; text-align: justify;">
+									<ul style="text-align: left; font-weight: 500;">
+										<b>Stanford Bunny</b>
+										<li > 1 Stanford Bunny with a white Lambert material.</li>
+										<li > 3 point Lights.</li>
+										<li > 1 directional Light</li>
+										<li > 5 planes</br> All with blue dielectric Cook-Torrance materials (roughness 0.4)</li>
+									</ul>
+								</div>
+							</div>
+							<p>In my ray tracer, I've rendered an array of scenes to highlight its capabilities. 
+								From spheres and triangles with different materials, including metallic and dielectric Cook-Torrance materials, 
+								to a detailed Stanford Bunny model with multiple light sources and planes, 
+								each scene demonstrates the versatility and potential of this project.</p>
+							<p>While this ray tracer represents a significant milestone in my journey, I am eager to build upon the lessons learned and embark on a new project, 
+								applying the knowledge and experiences gained to create an even more impressive ray tracing system.</p>
+							<p><b>Rendering Showcase:</b></p>
+							<div style=" display: flex; flex-wrap: wrap; padding: 5px;">
+								<div style=" max-width: 32.6%; padding: 5px;">
+									<img src="../images/raytracer/RayTracer1 Sphere&Plane-Intersection.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+									<img src="../images/raytracer/RayTracer4 TriangleMesh & Cullmodes.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+								</div>
+								<div style="max-width: 32.6%; padding: 5px;">
+									<img src="../images/raytracer/Raytracer2 Lights.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+									<img src="../images/raytracer/RayTracer5 Spheres.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+								</div>
+								<div style="max-width: 32.6%; padding: 5px 5px 150px 5px;">
+									<img src="../images/raytracer/RayTracer3 Materials.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+									<img src="../images/raytracer/RayTracer7 Stanford bunny.bmp" style="margin-top: 8px; vertical-align: middle; width: 100%;" >
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/generic/js/jquery.min.js"></script>
+			<script src="../assets/generic/js/browser.min.js"></script>
+			<script src="../assets/generic/js/breakpoints.min.js"></script>
+			<script src="../assets/generic/js/util.js"></script>
+			<script src="../assets/generic/js/main.js"></script>
+
+	</body>
+</html>

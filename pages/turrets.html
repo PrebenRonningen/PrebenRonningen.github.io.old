@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Turret targeting study</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/generic/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/generic/css/noscript.css" /></noscript>
+		<link rel="icon" href="../images/SphereGW.png">
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+							
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="overpass.html">Overpass 2</a></li>
+							<li><a href="starbase.html">Starbase</a></li>
+							<li><a href="trine5.html">Trine 5: A Clockwork Conspiracy</a></li>
+							<li><a href="pathfinder.html">Pathfinding study</a></li>
+							<li><a href="turrets.html">Turret targeting study</a></li>
+							<li><a href="spheres.html">Sphere generation research study</a></li>
+							<li><a href="engine.html">Small 3D Engine (R&D)</a></li>			
+							<li><a href="rasterizer.html">CPU/GPU rasterizer (3DX11)</a></li>
+							<li><a href="raytracer.html">CPU ray tracer</a></li>
+							<li><a href="titanstribute.html">Titan's Tribute - UE4 game</a></li>
+							<li><a href="crashedgame.html">Crashed - Unity game</a></li>
+							<li><a href="bomberman.html">Bomber-Man</a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Turret targeting study</h1>
+							<span class="image main"><img src="../images/banner/Turrets.png" alt="" /></span>
+							<p>I made this project to deepen my understanding of C#, rotations, and unitys visual debugging tools.
+								In this project, I explored two different approaches to building a turret system, where multiple joints work together to accurately point towards a target.</p>
+							<p><b>Approach 1: The All-in-One Turret (Turret Script)</b></p>
+							<div style=" display: flex; flex-wrap: wrap;">
+
+								<img src="../images/Turret/SingleTurret.png" style="margin-top: 8px; vertical-align: middle; width: 50%; padding: 0 5px 5px 0;" >
+								<img src="../images/Turret/MultipleTurrets.png" style="margin-top: 8px; vertical-align: middle; width: 50%; padding: 0 0 5px 5px;" >
+
+							</div>
+						<div>
+							<b>Components and Initialization</b>
+							<li><b>Turret Component:</b> The turret is composed of three parts - the base, the neck, and the top. These parts are separate GameObjects.</li>
+							<li><b>Finding the Target:</b> The turret finds a target object by searching for GameObjects tagged as "Target." It uses the first found target or sets a default target position if no targets are available.</li>
+							<li><b>Debugging visuals:</b> A debugging mode to visualize the turret's aiming direction, and rotations using Gizmos in the Unity editor.</li>
+							<li><b>Rotation Overrides:</b> This approach includes a mechanism to override the rotation direction when limits are reached. It ensures that the turret moves in the most efficient direction to reach the target.</li>
+							<li><b>Validation:</b> The turret performs angle validation to handle rotation changes and avoid sudden jumps in orientation.</li>
+							<p></p>
+
+							<b>Aiming Mechanics</b>
+							<li><b>Update Loop:</b> In the Update method, the turret continuously calculates the distance to the target and checks if it's within the maximum target range.</li>
+							<li><b>Base Rotation:</b> The turret calculates the rotation required for both the base and top to aim at the target. It uses the Vector3.SignedAngle function to determine the rotation angle.</li>
+							<li><b>Rotation Constraints:</b> To prevent the turret from exceeding predefined rotation limits, the LimitRotation method is used to clamp the rotations.</li>
+							<p></p>
+
+							<p><b>Approach 2: The Jointed Turret (Joint Script)</b></p>
+							<p>The 2nd approach is comprized of multiple "Joint" components that work together to orient the turret. The difference in from the previous approach is that the turret can be configured with multiple joints instead of the predefined Base, Neck & Top.</p>
+							<b>Jointed design</b>
+							<li><b>Working together as one:</b>  The Joint Script employs multiple joints to create a turret system that adapts to various orientations. 
+								This allows the turrets to be position anywhere while still ensuring they all focus on a common target.</li>
+							<li><b>Precise target tracking:</b> The script ensures that turrets accurately track and aim at the target, even within complex configurations..</li>
+							<div style="display: flex; flex-wrap: wrap;">
+								<div style="width: 50%; padding: 0 5px 5px 0;">
+									<video src="../images/Turret/TurretMov1.mp4" controls style="width: 100%;">
+								</div>
+								<div style="width: 50%; padding: 0 0 5px 5px;">
+									<video src="../images/Turret/TurretMov2.mp4" controls style="width: 100%;">
+								</div>
+							</div>
+						
+							</div>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/generic/js/jquery.min.js"></script>
+			<script src="../assets/generic/js/browser.min.js"></script>
+			<script src="../assets/generic/js/breakpoints.min.js"></script>
+			<script src="../assets/generic/js/util.js"></script>
+			<script src="../assets/generic/js/main.js"></script>
+
+	</body>
+</html>

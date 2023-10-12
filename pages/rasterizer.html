@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>CPU/GPU rasterizer (3DX11)</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/generic/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/generic/css/noscript.css" /></noscript>
+		<link rel="icon" href="../images/SphereGW.png">
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+						
+						<!-- Logo -->
+							<a href="https://github.com/PrebenRonningen/GPU-CPU-Rasterizer" class="logo">
+								<span class="icon brands fa-github fa-2x"></span><span class="title">Project can be found here on Github</span>
+							</a>
+							
+						<!-- Nav -->
+							<nav>
+								<ul>
+									<li><a href="#menu">Menu</a></li>
+								</ul>
+							</nav>
+							
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="overpass.html">Overpass 2</a></li>
+							<li><a href="starbase.html">Starbase</a></li>
+							<li><a href="trine5.html">Trine 5: A Clockwork Conspiracy</a></li>
+							<li><a href="pathfinder.html">Pathfinding study</a></li>
+							<li><a href="turrets.html">Turret targeting study</a></li>
+							<li><a href="spheres.html">Sphere generation research study</a></li>
+							<li><a href="engine.html">Small 3D Engine (R&D)</a></li>			
+							<li><a href="rasterizer.html">CPU/GPU rasterizer (3DX11)</a></li>
+							<li><a href="raytracer.html">CPU ray tracer</a></li>
+							<li><a href="titanstribute.html">Titan's Tribute - UE4 game</a></li>
+							<li><a href="crashedgame.html">Crashed - Unity game</a></li>
+							<li><a href="bomberman.html">Bomber-Man</a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>CPU/GPU rasterizer (3DX11)</h1>
+							<span class="image main"><img src="../images/banner/RasterizerBanner.png" alt="" /></span>
+							<p>In the world of computer graphics, my CPU and GPU rasterizer project stands as a testament to the convergence of art and technology. The primary objective of this endeavor was to seamlessly transition between rendering scenes on the GPU and CPU, allowing users to switch rendering modes with a simple click. Leveraging the power of DirectX's Effects shader system, this project offers a captivating glimpse into the inner workings of graphics rendering, implemented entirely on the CPU.</p>
+							<div style=" display: flex; flex-wrap: wrap;">
+
+								<img src="../images/rasterizer/HRasterizer4.png" style="margin-top: 8px; vertical-align: middle; width: 50%; padding: 0 5px 5px 0;" >
+								<img src="../images/rasterizer/SRasterizer4.png" style="margin-top: 8px; vertical-align: middle; width: 50%; padding: 0 0 5px 5px;" >
+
+							</div>
+							<p>My versatile rasterizer boasts an array of impressive features, showcasing its capabilities:</p>
+							<ul>
+								<li><b>Runtime Render-Mode Switch:</b> A unique feature allows users to toggle between CPU and GPU rendering on the fly, providing insights into the intricacies of both approaches.</li>
+								<li><b>Triangle Mesh Rasterizing:</b> It efficiently rasterizes complex triangle meshes, transforming 3D models into vibrant 2D representations.</li>
+								<li><b>Camera Control:</b> It efficiently rasterizes complex triangle meshes, transforming 3D models into vibrant 2D representations.</li>
+								<li><b>Culling Modes:</b> The ability to choose between front-face culling, back-face culling, or no culling for meshes provides flexibility in scene optimization.</li>
+								<li><b>Lighting:</b> The ray tracer incorporates both point lights and directional lights, facilitating the creation of compelling lighting effects and shadows.</li>
+								<li><b>Shadows:</b> The project implements hard shadows, enhancing the visual realism of scenes.</li>
+								<li><b>Scene Cycling:</b> The ray tracer can seamlessly cycle through different scenes, showcasing its versatility in rendering various environments.</li>
+								<li><b>Transparency:</b> Although not entirely implemented in the CPU rasterizer, transparency effects add depth and realism to scenes, especially in GPU rendering.</li>
+								<li><b>Sampling State Cycling:</b> Users can cycle through different sampling states, including Point, Linear, and Anisotropic (limited to GPU rendering), to control texture quality and performance.</li>
+								<li><b>Texture Variety:</b> The rasterizer supports multiple texture types, including Diffuse, Normal, Glossiness, and Specular maps, enhancing the visual richness of models.</li>
+								<li><b>Texture Map Toggling:</b> Users can toggle the use of different texture maps, granting control over the rendering process.</li>
+								<li><b>Turntable Feature:</b> The project includes a turntable function, allowing for smooth and continuous rotation of models, perfect for showcasing 3D assets.</li>
+								<li><b>Frustrum Culling:</b> Enhancing performance, frustrum culling prevents the rendering of objects outside the camera's view, optimizing scene rendering.</li>
+							</ul>
+							<p>My CPU and GPU rasterizer project represents a captivating fusion of technical prowess. 
+								It offers a window into the intricate world of graphics rendering and the magic that transpires when art meets technology.
+								This project serves as a stepping stone towards new horizons in this ever-evolving field</p>
+							<p><b>Rendering Showcase:</b></p>
+							<div style=" display: flex; flex-wrap: wrap;">
+
+								<img src="../images/rasterizer/HRasterizer1.png" style="margin-top: 8px; vertical-align: middle; width: 50%; padding: 0 5px 0 0;" >
+								<img src="../images/rasterizer/SRasterizer1.png" style="margin-top: 8px; vertical-align: middle; width: 50%; padding: 0 0 0 5px;" >
+
+								<img src="../images/rasterizer/HRasterizer2.png" style="margin-top: 8px; vertical-align: middle; width: 50%; padding: 0 5px 0 0;" >
+								<img src="../images/rasterizer/SRasterizer2.png" style="margin-top: 8px; vertical-align: middle; width: 50%; padding: 0 0 0 5px;" >
+
+							</div>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/generic/js/jquery.min.js"></script>
+			<script src="../assets/generic/js/browser.min.js"></script>
+			<script src="../assets/generic/js/breakpoints.min.js"></script>
+			<script src="../assets/generic/js/util.js"></script>
+			<script src="../assets/generic/js/main.js"></script>
+
+	</body>
+</html>

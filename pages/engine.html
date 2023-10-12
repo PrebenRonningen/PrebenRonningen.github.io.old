@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Small 3D engine (R&D)</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/generic/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/generic/css/noscript.css" /></noscript>
+		<link rel="icon" href="../images/SphereGW.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css">
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="inner">
+
+						<!-- Logo -->
+						<a href="https://github.com/PrebenRonningen/Impact" class="logo">
+							<span class="icon brands fa-github fa-2x"></span><span class="title">Project can be found here on Github</span>
+						</a>
+
+						<!-- Nav -->
+							<nav>
+								<ul>
+									<li><a href="#menu">Menu</a></li>
+								</ul>
+							</nav>
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="overpass.html">Overpass 2</a></li>
+							<li><a href="starbase.html">Starbase</a></li>
+							<li><a href="trine5.html">Trine 5: A Clockwork Conspiracy</a></li>
+							<li><a href="pathfinder.html">Pathfinding study</a></li>
+							<li><a href="turrets.html">Turret targeting study</a></li>
+							<li><a href="spheres.html">Sphere generation research study</a></li>
+							<li><a href="engine.html">Small 3D Engine (R&D)</a></li>			
+							<li><a href="rasterizer.html">CPU/GPU rasterizer (3DX11)</a></li>
+							<li><a href="raytracer.html">CPU ray tracer</a></li>
+							<li><a href="titanstribute.html">Titan's Tribute - UE4 game</a></li>
+							<li><a href="crashedgame.html">Crashed - Unity game</a></li>
+							<li><a href="bomberman.html">Bomber-Man</a></li>
+						</ul>
+					</nav>
+
+			<!-- Main -->
+				<div id="main">
+					<div class="inner">
+						<h1>Small 3D engine (R&D)</h1>
+						<span class="image main"><img src="../images/banner/PlanetsBanner.png" alt="" /></span>
+						<p>For this Project I set myself a clear goal. I want to learn more about what goes into making a game engine.</p>
+						<p>When I started this project, I knew I wanted to learn how to work with DirectX11 without using the Effects system, but I didn't really know where to begin.
+							As a guiding hand I looked at other projects and their architecture, which helped me to get started. I learned a lot from Microsoft's documentation on Win32, as well as looking into how other people had solved the same issues that I ran into. 
+							I found a render engine called "hw3d" by PlanetChili, after examining it, I took inspiration from the things I liked, and came up with my own solutions for what I didn't like. 
+							</p>
+
+							<b>Short Showcase:</b>
+							<span class="video">
+								<video width="1280" height="720" poster="../images/Engine/Hold.png" preload="metadata" controls="controls"  onloadstart="this.volume=1" style="margin: 1em 0 1em 0;">
+									<source src="../images/Engine/ImpactDemo.mp4" type="video/mp4" alt="" >
+								</video>
+							</span>
+							<div style=" display: flex; flex-wrap: wrap;  padding: 5px;">
+								<div style="width: 49%; margin-right: 1%;">
+									<p>One example of what I didn't like was the hard-coded approach of ordering objects in the applications render function. seen below</p>
+									<img src="../images/Engine/ChiliDoFrame.png" style="margin-top: 8px; vertical-align: middle; width: 75%;" >
+								</div>
+								<div style="width: 48%;">
+									<p>My solution was to make a layered structure, where the rendered Objects get handled elsewhere.  seen below</p>
+									<img src="../images/Engine/ImpactRender.png" style="margin-top: 8px; vertical-align: middle; width: 75%;" >
+								</div>
+							</div>
+							<p>The idea of the layer structure is to separate each aspect into its own domain. With this in mind, I made an event handler that sends events to get handled through the layers, like a sift. 
+
+								First register the event which should be called, and what should trigger it.
+								<img src="../images/Engine/EventRegistration.png" style="vertical-align: middle; width: 75%;" ></p>
+								<p>When the trigger happens, the event gets sent through. 
+								<div style=" display: flex; flex-wrap: wrap;  padding: 5px;">
+									<div style="width: 49%; margin-right: 1%;">					
+										<img src="../images/Engine/Handle.png" style="margin-top: 8px; vertical-align: middle; width: 75%;" >
+									</div>
+								</div></p>
+								<p>The Rendering & Update loop happens in the reverse order of the event handling: Game > UI > Debug > Application.
+									The engine's objects are built up from components, currently using a very simple component system which is enough for now.
+									The engine can currently do just a few things: render primitive objects, diffuse texture rendering, point & directional lighting, dynamic camera movement
+									Next on my list of things to implement is the option to import assets, multiple texture maps such as height-maps, normal maps and roughness maps etc.</p>
+								</div>
+				</div>
+			</div>
+
+			
+			<script src="../assets/generic/js/jquery.min.js"></script>
+			<script src="../assets/generic/js/browser.min.js"></script>
+			<script src="../assets/generic/js/breakpoints.min.js"></script>
+			<script src="../assets/generic/js/util.js"></script>
+			<script src="../assets/generic/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+			
+		</body>
+		<!-- Scripts --><script>Prism.highlightAll();</script>
+</html>
